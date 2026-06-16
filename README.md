@@ -6,8 +6,8 @@
 
 <p>
 <a href="https://github.com/Fred4377"><img src="https://img.shields.io/badge/GitHub-Fred4377-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
-<a href="https://fred4377.github.io/index.html"><img src="https://img.shields.io/badge/Portfolio-Live_Site-1a73e8?style=for-the-badge&logo=googlechrome&logoColor=white" /></a>
-<a href="mailto:your.email@example.com"><img src="https://img.shields.io/badge/Email-Contact_Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white" /></a>
+<a href="https://fred4377.github.io/index.html/"><img src="https://img.shields.io/badge/Portfolio-Live_Site-1a73e8?style=for-the-badge&logo=googlechrome&logoColor=white" /></a>
+<a href="mailto:obachi62@gmail.com"><img src="https://img.shields.io/badge/Email-Contact_Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white" /></a>
 </p>
 
 </div>
@@ -124,7 +124,7 @@ const fred = {
 
 <div align="center">
 
-<a href="https://fred4377.github.io/index.html"><img src="https://img.shields.io/badge/🌐_Portfolio-Live_Site-1a73e8?style=for-the-badge" /></a>
+<a href="https://fred4377.github.io/index.html/"><img src="https://img.shields.io/badge/🌐_Portfolio-Live_Site-1a73e8?style=for-the-badge" /></a>
 <a href="https://github.com/Fred4377"><img src="https://img.shields.io/badge/GitHub-@Fred4377-181717?style=for-the-badge&logo=github" /></a>
 
 <br/><br/>
