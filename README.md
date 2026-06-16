@@ -14,7 +14,7 @@
 
 ---
 
-## 👋 About Me
+ About Me
 
 ```javascript
 const fred = {
@@ -27,19 +27,19 @@ const fred = {
         "Nyakach Technical & Vocational College"
     ],
     currentFocus: "Building scalable web apps with the MERN stack",
-    funFact: "I debug with console.log and I'm not ashamed 😄"
+    funFact: "I debug with console.log and I'm not ashamed "
 };
 ```
 
-> 🌟 *Passionate frontend developer with a keen eye for clean and elegant design. I specialize in crafting delightful user experiences and building full-stack web applications that solve real-world problems.*
+>  *Passionate frontend developer with a keen eye for clean and elegant design. I specialize in crafting delightful user experiences and building full-stack web applications that solve real-world problems.*
 
 ---
 
-## 🛠️ Tech Stack
+ Tech Stack
 
 <div align="center">
 
-### Frontend
+ Frontend
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
@@ -48,12 +48,12 @@ const fred = {
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-### Backend & Database
+ Backend & Database
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 ![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
 
-### Tools & Platforms
+ Tools & Platforms
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
 ![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
@@ -63,39 +63,39 @@ const fred = {
 
 ---
 
-## 🚀 Featured Projects
+ Featured Projects
 
 <div align="center">
 
-| 🛒 **ShopEase** | 📊 **DashPro Dashboard** |
+|  **ShopEase** |  **DashPro Dashboard** |
 |:---:|:---:|
 | Full-stack e-commerce platform with product browsing, cart management & checkout | Professional admin dashboard with data visualization & analytics |
 | `JavaScript` `React` `Node.js` `MongoDB` | `JavaScript` `React` `Chart.js` |
-| [🔗 View Live](https://fred4377.github.io/shopease) | [🔗 View Live](https://fred4377.github.io/dashpro-dashboard) |
+| [ View Live](https://fred4377.github.io/shopease) | [ View Live](https://fred4377.github.io/dashpro-dashboard) |
 
-| 📅 **BookEase** | 🤖 **ChatBotPro** |
+|  **BookEase** |  **ChatBotPro** |
 |:---:|:---:|
 | Online booking & reservation platform with scheduling | AI-powered chatbot with real-time messaging |
 | `JavaScript` `React` `Node.js` `Express` | `JavaScript` `React` `API Integration` |
-| [🔗 View Live](https://fred4377.github.io/bookease) | [🔗 View Live](https://fred4377.github.io/chatbotpro) |
+| [ View Live](https://fred4377.github.io/bookease) | [ View Live](https://fred4377.github.io/chatbotpro) |
 
-| ⚙️ **CCGworkflow** | 💈 **Barbar Shop** |
+|  **CCGworkflow** |  **Barbar Shop** |
 |:---:|:---:|
 | Workflow management tool for team collaboration | Modern, responsive barbershop website with elegant design |
 | `TypeScript` `React` `Node.js` | `HTML` `CSS` `JavaScript` |
-| [🔗 View Live](https://fred4377.github.io/CCGworkflow) | [🔗 View Live](https://fred4377.github.io/barbar-shop) |
+| [ View Live](https://fred4377.github.io/CCGworkflow) | [ View Live](https://fred4377.github.io/barbar-shop) |
 
-| 🏨 **Hotel** | 📱 **Obachi Mobile Shop** |
+|  **Hotel** |  **Obachi Mobile Shop** |
 |:---:|:---:|
 | Hotel booking website with room showcases & reservation | E-commerce mobile phone shop with product filtering |
 | `HTML` `CSS` `JavaScript` | `HTML` `Bootstrap` `jQuery` |
-| [🔗 View Live](https://fred4377.github.io/Hotel) | [🔗 View Live](https://fred4377.github.io/project) |
+| [ View Live](https://fred4377.github.io/Hotel) | [ View Live](https://fred4377.github.io/project) |
 
 </div>
 
 ---
 
-## 📈 GitHub Stats
+## GitHub Stats
 
 <div align="center">
 
@@ -110,7 +110,7 @@ const fred = {
 
 ---
 
-## 🏆 GitHub Trophies
+##  GitHub Trophies
 
 <div align="center">
 
@@ -120,7 +120,7 @@ const fred = {
 
 ---
 
-## 📫 Let's Connect
+##  Let's Connect
 
 <div align="center">
 
@@ -129,7 +129,7 @@ const fred = {
 
 <br/><br/>
 
-💬 *I'm always open to new opportunities, collaborations, and interesting projects!*
+ *I'm always open to new opportunities, collaborations, and interesting projects!*
 
 *Feel free to reach out if you need a reliable web developer.*
 
