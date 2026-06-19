@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fred Otieno | Full Stack Web Developer</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Fira+Code&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #0a0a0f;
+            --surface-color: #111827;
+            --primary: #1a73e8;
+            --secondary: #00c9ff;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Gradient Text Utility */
+        .text-gradient {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Navbar */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(10, 10, 15, 0.8);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-weight: 400;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--secondary);
+        }
+
+        /* Hero Section */
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            padding: 0 20px;
+        }
+
+        header h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        header h2 {
+            font-size: 1.5rem;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            border: none;
+            box-shadow: 0 4px 15px rgba(0, 201, 255, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 201, 255, 0.5);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--text-main);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: rgba(26, 115, 232, 0.1);
+            transform: translateY(-3px);
+        }
+
+        /* Particles */
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+        
+        .particle {
+            position: absolute;
+            background: rgba(0, 201, 255, 0.1);
+            border-radius: 50%;
+            animation: float 10s infinite linear;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(100vh) scale(0); opacity: 1; }
+            100% { transform: translateY(-10vh) scale(1); opacity: 0; }
+        }
+
+        /* Sections */
+        section {
+            padding: 100px 10%;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        /* About & Skills */
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            color: var(--text-muted);
+        }
+
+        .skills {
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .skill-badge {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .skill-badge:hover {
+            transform: translateY(-5px);
+            border-color: var(--secondary);
+            background: rgba(0, 201, 255, 0.1);
+        }
+
+        /* Projects */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: var(--surface-color);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 30px;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .project-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .project-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .project-card p {
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+        }
+
+        .tech-tags span {
+            font-size: 0.8rem;
+            padding: 4px 10px;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.05);
+            font-family: 'Fira Code', monospace;
+        }
+
+        .project-link {
+            display: inline-block;
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: opacity 0.3s;
+        }
+
+        .project-link:hover {
+            opacity: 0.8;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--text-muted);
+        }
+
+        .social-links {
+            margin-bottom: 20px;
+        }
+
+        .social-links a {
+            color: var(--text-main);
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--secondary);
+        }
+
+        /* Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.5rem; }
+            nav { padding: 20px; }
+            nav ul { display: none; /* Add hamburger menu logic for real site */ }
+            section { padding: 60px 5%; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Fred<span class="text-gradient">.dev</span></div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+        </ul>
+    </nav>
+
+    <header id="home">
+        <div class="particles" id="particles"></div>
+        <h1 class="reveal active">Hi, I'm <span class="text-gradient">Fred Otieno</span></h1>
+        <h2 class="reveal active">Full Stack Web Developer</h2>
+        <p class="reveal active" style="color: var(--text-muted); margin-bottom: 40px; max-width: 600px; font-size: 1.1rem;">
+            Specializing in the MERN stack. I turn complex problems into elegant, modern, and scalable web solutions.
+        </p>
+        <div class="cta-buttons reveal active">
+            <a href="#projects" class="btn btn-primary">View My Work</a>
+            <a href="https://github.com/Fred4377" target="_blank" class="btn btn-outline"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+    </header>
+
+    <section id="about">
+        <h2 class="section-title reveal"><span class="text-gradient">About & Skills</span></h2>
+        <div class="about-content">
+            <div class="about-text reveal">
+                <p>Hello! I'm Fred, a passionate developer based in Nairobi, Kenya 🇰🇪. With over 3 years of experience in web development, I enjoy building everything from interactive landing pages to complex full-stack applications.</p>
+                <p>My journey started at Inceptor Institute of Technology and Nyakach TVC, and since then, I've successfully launched multiple e-commerce platforms, admin dashboards, and booking systems.</p>
+            </div>
+            <div class="skills reveal">
+                <div class="skill-badge"><i class="fab fa-react" style="color: #61DAFB;"></i> React.js</div>
+                <div class="skill-badge"><i class="fab fa-node-js" style="color: #339933;"></i> Node.js</div>
+                <div class="skill-badge"><i class="fas fa-database" style="color: #47A248;"></i> MongoDB</div>
+                <div class="skill-badge"><i class="fab fa-js" style="color: #F7DF1E;"></i> JavaScript</div>
+                <div class="skill-badge"><i class="fas fa-code" style="color: #3178C6;"></i> TypeScript</div>
+                <div class="skill-badge"><i class="fab fa-html5" style="color: #E34F26;"></i> HTML/CSS</div>
+                <div class="skill-badge"><i class="fab fa-git-alt" style="color: #F05032;"></i> Git</div>
+                <div class="skill-badge"><i class="fas fa-paint-brush" style="color: #38B2AC;"></i> TailwindCSS</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title reveal">Featured <span class="text-gradient">Projects</span></h2>
+        <div class="project-grid">
+            
+            <div class="project-card reveal">
+                <h3>ShopEase</h3>
+                <p>A full-stack e-commerce platform featuring product browsing, cart management, and seamless checkout flow.</p>
+                <div class="tech-tags">
+                    <span>React</span><span>Node.js</span><span>MongoDB</span>
+                </div>
+                <a href="https://github.com/Fred4377/shopease" target="_blank" class="project-link">View Repository ➔</a>
+            </div>
+
+            <div class="project-card reveal">
+                <h3>DashPro Dashboard</h3>
+                <p>Professional admin dashboard with real-time analytics, data visualization, and comprehensive user management.</p>
+                <div class="tech-tags">
+                    <span>JavaScript</span><span>React</span><span>Chart.js</span>
+                </div>
+                <a href="https://github.com/Fred4377/dashpro-dashboard" target="_blank" class="project-link">View Repository ➔</a>
+            </div>
+
+            <div class="project-card reveal">
+                <h3>BookEase</h3>
+                <p>Online booking and reservation system with smart scheduling, real-time availability, and user accounts.</p>
+                <div class="tech-tags">
+                    <span>React</span><span>Express</span><span>MongoDB</span>
+                </div>
+                <a href="https://github.com/Fred4377/bookease" target="_blank" class="project-link">View Repository ➔</a>
+            </div>
+
+            <div class="project-card reveal">
+                <h3>ChatBotPro</h3>
+                <p>Intelligent AI-powered chatbot application with real-time messaging and a beautiful conversational UI.</p>
+                <div class="tech-tags">
+                    <span>React</span><span>Node.js</span><span>AI APIs</span>
+                </div>
+                <a href="https://github.com/Fred4377/chatbotpro" target="_blank" class="project-link">View Repository ➔</a>
+            </div>
+
+            <div class="project-card reveal">
+                <h3>CCGworkflow</h3>
+                <p>Workflow management tool for team collaboration, automated processes, and task tracking.</p>
+                <div class="tech-tags">
+                    <span>TypeScript</span><span>React</span><span>Node.js</span>
+                </div>
+                <a href="https://github.com/Fred4377/CCGworkflow" target="_blank" class="project-link">View Repository ➔</a>
+            </div>
+
+            <div class="project-card reveal">
+                <h3>MetroMotion</h3>
+                <p>Nairobi Smart Transit & Fleet Command dashboard simulating real-time shuttle telemetry, route dispatching, and Lipa na M-Pesa fare top-ups.</p>
+                <div class="tech-tags">
+                    <span>React 19</span><span>Vanilla CSS</span><span>Motion Spring</span>
+                </div>
+                <a href="https://fred4377.github.io/metromotion/" target="_blank" class="project-link">View Live Site ➔</a>
+            </div>
+
+            <div class="project-card reveal">
+                <h3>Obachi Mobile Shop</h3>
+                <p>Responsive e-commerce mobile phone store with smart filtering, product carousels, and dark mode.</p>
+                <div class="tech-tags">
+                    <span>HTML/CSS</span><span>Bootstrap</span><span>jQuery</span>
+                </div>
+                <a href="https://fred4377.github.io/project/" target="_blank" class="project-link">View Live Site ➔</a>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/Fred4377" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:your-email@example.com"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p>&copy; 2026 Fred Otieno. Built with 💻 and ☕ in Nairobi.</p>
+    </footer>
+
+    <script>
+        // Smooth Reveal Animation
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        reveal(); // Trigger on load
+
+        // Background Particles
+        const particlesContainer = document.getElementById('particles');
+        for(let i=0; i<30; i++) {
+            let particle = document.createElement('div');
+            particle.classList.add('particle');
+            
+            // Random properties
+            let size = Math.random() * 20 + 5;
+            let left = Math.random() * 100;
+            let animDuration = Math.random() * 10 + 10;
+            let animDelay = Math.random() * 10;
+            
+            particle.style.width = size + 'px';
+            particle.style.height = size + 'px';
+            particle.style.left = left + '%';
+            particle.style.animationDuration = animDuration + 's';
+            particle.style.animationDelay = animDelay + 's';
+            
+            particlesContainer.appendChild(particle);
+        }
+    </script>
+</body>
+</html>
